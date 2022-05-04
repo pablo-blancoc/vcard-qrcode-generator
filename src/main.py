@@ -1,5 +1,4 @@
 import qrcode
-import os
 
 # write all information
 name = ""
@@ -8,7 +7,7 @@ title = ""
 organization = ""
 url = ""
 cellphone = ""
-fill_color = "#002642"
+fill_color = "black"
 back_color = "white"
 
 # create information string
@@ -37,4 +36,4 @@ qrcode.make(fit=True)
 
 # create the image and save it
 img = qrcode.make_image(fill_color=fill_color, back_color=back_color)
-img.save(os.path.join("files", f"{name}{last_name}.png"))
+img.save(f"{name}{last_name}.png")
